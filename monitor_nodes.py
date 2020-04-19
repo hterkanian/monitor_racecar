@@ -19,6 +19,13 @@ running it.
 Existing list of student nodes, if any, assumed in a pickled set 
     object in 'assignment_1.pkl' in working directory.
 
+Environment: Environment variables identifying the location of roscore 
+and the IP address of this machine must be set:
+    1.  export ROS_MASTER_URI=http://<roscore IP address>:11311
+    2.  export ROS_IP=<localhost IP address>
+
+Input:  none
+
 Output:
     1.  any new nodes are added to student set and pickled in a 
         file in the current directory  with name stored in 
@@ -32,9 +39,10 @@ Termination:
 Defaults: (Set when node object created)
     1.  File containing names of students: default_file = 'assignment_1.pkl'
     2.  Default node names begin with default_n_space = 'student'
+    3.  Default control topic: self.control_topic = '/hst/control'
 
 Reset:
-    To clear the list delete file named is self.student_file
+    To clear the list delete file named in default_file
 """
 
 import os.path

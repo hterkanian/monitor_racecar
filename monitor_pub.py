@@ -19,15 +19,28 @@
     On termination print updated list of students and serialize the 
     set to self.student_file.
 
+    Environment: Environment variables identifying the location of roscore
+    and the IP address of this machine must be set:
+    1.  export ROS_MASTER_URI=http://<roscore IP address>:11311
+    2.  export ROS_IP=<localhost IP address>
+
+    Input:  none
+
     Output (on termination):
         1.  serialized list of students completing assignment in 
             self.student_file; and
         2.  student list to stdout.
 
-    Default namespace is '/student'
-    Default self.student_file is assignment_2.pkl
+    Defaults: (set when node is initialized)
+    1.  Default namespace: default_n_space = '/student'
+    2.  Default student file: default_file = assignment_2.pkl
+    3.  Default control topic: self.control_topic = '/hst/control'
 
-    Terminate script by publishing any string to /hst/control topic.
+    Reset: 
+    Clear the list of students delete the file named in default_file
+
+    Termination:
+    Ppublish any string message to /hst/control topic.
 """
 
 
