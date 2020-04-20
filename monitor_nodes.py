@@ -4,7 +4,7 @@ Harry Sarkis Terkanian
 
 January 20, 2020; revised January 22, 2020, January 30, 2020, 
 February 1, 2020, February 2, 2020, February 4, 2020, February 5, 2020,
-April 17, 2020
+April 17-20, 2020
 
 A script to check for and log student created nodes with node 
 names in the form 'student_<name(s)>' and maintain and print a 
@@ -17,7 +17,8 @@ named as above so this script can identify a node with the students
 running it.
     
 Existing list of student nodes, if any, assumed in a pickled set 
-    object in 'assignment_1.pkl' in working directory.
+    object in file named by default_file variable located in 
+    the current working directory.
 
 Environment: Environment variables identifying the location of roscore 
 and the IP address of this machine must be set:
@@ -28,17 +29,18 @@ Input:  none
 
 Output:
     1.  any new nodes are added to student set and pickled in a 
-        file in the current directory  with name stored in 
-        self.student_file in current directory.
-    2.  print a list of students to stdout
+        file in the current directory nameed in 
+        the default_file variable and located in current directory.
+    2.  print a list of students to stdout.
 
 
 Termination:
-    Publish any string message to topic '/hst/control'
+    Publish any string message to topic set by self.control_topic variable.
 
 Defaults: (Set when node object created)
     1.  File containing names of students: default_file = 'assignment_1.pkl'
-    2.  Default node names begin with default_n_space = 'student'
+    2.  Default node namespace begins with value in variable 
+        default_n_space = 'student'
     3.  Default control topic: self.control_topic = '/hst/control'
 
 Reset:

@@ -5,9 +5,9 @@
 
     January 12, 2020; revised January 23, 2020, January 28, 2020,
     January 29, 2020, January 30, 2020, February 2, 2020, February 5, 2020,
-    April 17, 2020
+    April 17-20, 2020
 
-    Unpickle a list of students (a set object) who have previously 
+    Unpickle a list of students (a Python set object) who have previously 
     completed the assignment from file in current directory named in 
     self.student_file.
 

@@ -5,19 +5,19 @@
 
     January 12, 2020; revised January 23, 2020, January 28, 2020,
     January 29, 2020, January 30, 2020, February 2, 2020, February 5, 2020,
-    April 17, 2020
+    April 17-20, 2020
 
-    Unpickle a list of students (a set object) who have previously 
+    Unpickle a list of students (a Python set object) who have previously 
     completed the assignment from file in current directory named in 
     self.student_file.
 
     Obtain a list of topics currently published in namespace /student. 
 
-    NOTE: Currently processes only String and Float32 messages.
+    NOTE: Currently processes only String and Float32 message typess.
         See: self.student_callback()
 
     Add any new student(s) who are publishing to the set students who 
-    have completed the assignment.
+    have previously completed the assignment.
   
     On termination print updated list of students and serialize the 
     set to self.student_file.
@@ -30,8 +30,8 @@
     Input:  none
 
     Output (on termination):
-        1.  serialized list of students completing assignment in 
-            self.student_file; and
+        1.  serialized list of students completing assignment to the 
+            file set by the variable self.student_file; and
         2.  student list to stdout.
 
     Defaults:
