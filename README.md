@@ -20,4 +20,4 @@ Monitors the creation of a rospy publisher object publishing to a topic in names
 Monitors the successful publication of String and Float32 message types by students.  Subscribes to published topics in namespace '/student.'  Topics are as above: '/student/<student name(s)>/<topic_name>'  Currently only String and Float32 message types are supported. Extracts and maintians a list studens successfully publishing to topics satisfying these constraints in the same manner as monitor_pub.py.  Termination is as in monitor_pub.py.
 
 ##### other files
-Other files in this repository are test, demonstration, or studnet framework files.
+Other files in this repository are test, demonstration, or student framework files.
